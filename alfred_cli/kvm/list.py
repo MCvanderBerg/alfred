@@ -18,4 +18,10 @@ def list():
     except (FileNotFoundError, json.JSONDecodeError):
         data = {}
 
-    click.echo(data)
+    if not data:
+        click.echo("no kvm entries yet")
+        return
+
+    # Print one key/value per line
+    for key, value in data.items():
+        click.echo(f"{key}: {value}")

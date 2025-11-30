@@ -15,8 +15,12 @@ def env():
     """
     data_path = files("alfred_cli.dam") / "data.json"
 
-    with data_path.open() as f:
-        data = json.load(f)
+    try:
+        with data_path.open() as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        # If there is no data file yet, just do nothing.
+        return
 
     for key, path in data.items():
         if not key:

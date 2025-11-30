@@ -12,6 +12,7 @@ alfred_cli/dam/env.py
 alfred_cli/dam/get.py
 alfred_cli/dam/list.py
 alfred_cli/dam/remove.py
+alfred_cli/dam/data.json
 alfred_cli/kvm/__init__.py
 alfred_cli/kvm/add.py
 alfred_cli/kvm/get.py

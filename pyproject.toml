@@ -1,0 +1,21 @@
+[project]
+name = "alfred-cli"
+version = "0.1.0"
+
+[project.scripts]
+alfred = "alfred_cli.main:cli"
+kvm = "alfred_cli.kvm:kvm_group"
+dam = "alfred_cli.dam:dam_group"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["alfred_cli"]
+
+
+[tool.setuptools.package-data]
+"alfred_cli.kvm" = ["data.json"]
+"alfred_cli.dam" = ["data.json"]
+

@@ -1,0 +1,4 @@
+[console_scripts]
+alfred = alfred_cli.main:cli
+dam = alfred_cli.dam:dam_group
+kvm = alfred_cli.kvm:kvm_group

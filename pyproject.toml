@@ -2,6 +2,9 @@
 name = "alfred-cli"
 version = "0.1.0"
 
+[project.dependencies]
+click = ">=8,<9"
+
 [project.scripts]
 alfred = "alfred_cli.main:cli"
 kvm = "alfred_cli.kvm:kvm_group"
